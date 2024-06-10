@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../assets/crew/background-crew-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav-line {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.nav-line hr {
+    border: none;
+    border-top: 1px solid white;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.number {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.content {
+    max-width: 1440px;
+    width: 100%;
+}
+
+.title h1 {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 100px 0;
+    letter-spacing: 4px;
+    margin-bottom: 20px; 
+    text-align: left;
+}
+
+.number-title {
+    color: #FFFFFF;
+    opacity: 25%;
+    margin-right: 10px;
+}
+
+.contenu-crew {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.biography {
+    display: flex;
+    flex-direction: column;   
+    margin-bottom: 20px;
+}
+
+.biography .text {
+    max-width: 600px;
+    padding-right: 20px;
+}
+
+.text {
+    text-align: left;
+}
+
+.biography h2 {
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 37px;
+    color: #FFFFFF;
+    opacity: 50.42%;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.biography span {
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 64px;
+    color: #FFFFFF;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.biography p {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    color: #D0D6F9;
+    margin-top: 50px;
+} 
+
+.photo {
+    flex: 1;
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pagination {
+    display: flex;
+    gap: 40px;
+    margin-top: 400px;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #D0D6F9;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.circle-active {
+    background-color: #FFFFFF;
+}
