@@ -14,20 +14,27 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div>
-                <img src="assets/favicon.ico" alt="logo">
-            </div>
-            <div class="nav-line">
-                <hr>
-            </div>
-            <ul class="menu">
-                <li><a href="homepage.html"><span class="number">00</span>home</a></li>
-                <li><a href="destination.html"><span class="number">01</span>destination</a></li>
-                <li><a href="crewpage.html"><span class="number">02</span>crew</a></li>
-                <li><a href="technology.html"><span class="number">03</span>techonology</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <div>
+                    <img src="assets/favicon.ico" alt="logo">
+                </div>
+                <div class="nav-line">
+                    <hr>
+                </div>
+                <div class="menu-burger">
+                    <button id="burger-btn">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+                <ul class="menu">
+                    <li><a href="homepage.html"><span class="number">00</span>home</a></li>
+                    <li><a href="destination.html"><span class="number">01</span>destination</a></li>
+                    <li><a href="crewpage.html"><span class="number">02</span>crew</a></li>
+                    <li><a href="technology.html" class="active"><span class="number">03</span>techonology</a></li>
+                </ul>
+            </nav>
     </header>
     <main>
         <section class="content">
@@ -37,10 +44,9 @@
             <div class="contenu-tech">
                 <div class="terminology">
                     <div class="pagination">
-                        <div class="circle-active"></div>
-                        <div class="circle"><span class="number-pagination">1</span></div>
-                        <div class="circle"><span class="number-pagination">2</span></div>
-                        <div class="circle"><span class="number-pagination">3</span></div>
+                        <a href="technology.html" class="circle-active"><span class="number-pagination">1</span></a>
+                        <a href="technologyspaceport.html" class="circle"><span class="number-pagination">2</span></a>
+                        <a href="technologyspacecapsule.html" class="circle"><span class="number-pagination">3</span></a>
                     </div> 
                     <div class="text">
                         <h2>the terminology...</h2>
@@ -57,5 +63,6 @@
             </div>
         </section>
     </main>
+    <script src="js/nav.js"></script>
 </body>
 </html>

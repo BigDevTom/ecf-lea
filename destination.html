@@ -21,9 +21,16 @@
             <div class="nav-line">
                 <hr>
             </div>
+            <div class="menu-burger">
+                <button id="burger-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
             <ul class="menu">
                 <li><a href="homepage.html"><span class="number">00</span>home</a></li>
-                <li><a href="destination.html"><span class="number">01</span>destination</a></li>
+                <li><a href="destination.html" class="active"><span class="number">01</span>destination</a></li>
                 <li><a href="crewpage.html"><span class="number">02</span>crew</a></li>
                 <li><a href="technology.html"><span class="number">03</span>techonology</a></li>
             </ul>
@@ -41,10 +48,10 @@
                 <div class="description">
                     <nav class="menu-choice">
                         <ul>
-                            <li><a href=""></a>moon</li>
-                            <li><a href=""></a>mars</li>
-                            <li><a href=""></a>europa</li>
-                            <li><a href=""></a>titan</li>
+                            <li><a href="destination.html" class="active">moon</a></li>
+                            <li><a href="destinationmars.html">mars</a></li>
+                            <li><a href="destinationeuropa.html">europa</a></li>
+                            <li><a href="destinationtitan.html">titan</a></li>
                         </ul>
                     </nav>
                     <h2>moon</h2>
@@ -66,5 +73,6 @@
             </div>
         </section>
     </main>
+    <script src="js/nav.js"></script>
 </body>
 </html>

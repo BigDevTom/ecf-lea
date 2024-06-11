@@ -55,6 +55,40 @@ header nav {
     text-transform: uppercase;
 }
 
+.menu li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    padding: 5px;
+    position: relative;
+}
+
+.menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.menu li a.active::after {
+    width: 100%;
+    opacity: 1;
+}
+
 .number {
     margin-right: 10px;
     font-weight: bold;
@@ -101,9 +135,7 @@ main {
 }
 
 .moon img {
-    max-width: 100%;
-    width: 300px;
-    height: auto;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -118,13 +150,42 @@ main {
     margin-bottom: 20px;
 }
 
-.menu-choice li {
-    list-style: none;
-    color: #FFFFFF;
+.menu-choice li a {
     text-decoration: none;
+    color: #D0D6F9;
     text-transform: uppercase;
     font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 15px;
+    position: relative;
+    padding: 5px;
+}
+
+.menu-choice li {
+    list-style: none;
+}
+
+.menu-choice li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.menu-choice li a:hover::after {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.menu-choice li a.active::after {
+    width: 100%;
+    opacity: 1;
 }
 
 .description h2 {
@@ -158,6 +219,10 @@ hr {
     justify-content: space-between;
 }
 
+.info span {
+    text-transform: uppercase;
+}
+
 .distance, .time {
     text-align: left;
 }
@@ -174,4 +239,193 @@ hr {
     font-family: 'Bellefair', serif;
     font-size: 24px;
     color: white;
+}
+
+.menu-burger {
+    display: none;
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+    body {
+        background-image: url('../assets/destination/background-destination-tablet.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-line {
+        display: none;
+    }
+
+    .menu {
+        justify-content: end;
+        width: 80%;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .title h1 {
+        font-size: 24px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .explain {
+        flex-direction: column;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .moon img {
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .description {
+        width: 80%;
+        text-align: center;
+    }
+
+    .menu-choice ul {
+        flex-direction: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .description h2 {
+        font-size: 56px;
+    }
+
+    .description p {
+        font-size: 14px;
+    }
+
+    .info {
+        gap: 20px;
+        align-items: center;
+    }
+
+    .distance, .time {
+        text-align: center;
+    }
+
+    .menu-burger {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: url('../assets/destination/background-destination-mobile.jpg');
+    }
+
+    .nav-line {
+        display: none;
+    }
+
+    .menu-burger {
+        display: block;
+    }
+
+    .menu-burger button {
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 24px;
+        width: 30px;
+    }
+
+    .menu-burger .bar {
+        background-color: white;
+        height: 3px;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .title h1 {
+        font-size: 15px;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .explain {
+        flex-direction: column;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .moon img {
+        width: 150px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .description {
+        width: 90%;
+        text-align: center;
+    }
+
+    .menu-choice ul {
+        justify-content: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .description h2 {
+        font-size: 40px;
+    }
+
+    .description p {
+        font-size: 14px;
+    }
+
+    .info {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .distance, .time {
+        text-align: center;
+    }
+
+    .menu li a:hover::after {
+        width: 0;
+        opacity: 0;
+    }
+
+    .menu li a.active::after {
+        width: 0;
+    }
 }

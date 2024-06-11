@@ -32,6 +32,10 @@ header nav {
     border-top: 1px solid white;
 }
 
+.menu-burger {
+    display: none;
+}
+
 .menu {
     list-style: none;
     display: flex;
@@ -53,6 +57,30 @@ header nav {
     font-weight: 400;
     font-style: normal;
     text-transform: uppercase;
+    padding: 5px;
+    position: relative;
+}
+
+.menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.menu li a.active::after {
+    width: 100%;
+    opacity: 1;
 }
 
 .number {
@@ -164,12 +192,148 @@ main {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: #D0D6F9;
+    background-color: #FFFFFF;
+    opacity: 0.2;
     margin: 0 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .circle-active {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
     background-color: #FFFFFF;
+}
+
+@media screen and (min-width:376px) and (max-width: 768px){
+    body {
+        background-image: url('../assets/crew/background-destination-tablet.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-line {
+        display: none;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        text-align: left;
+    }
+
+    .contenu-crew {
+        flex-direction: column;
+    }
+
+    .biography {
+        align-items: center;
+    }
+
+    .biography, .photo {
+        width: 100%;
+    }
+
+    .pagination {
+        margin-top: 50px;
+    }
+
+    .photo {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: url('../assets/destination/background-destination-mobile.jpg');
+    }
+
+    .nav-line {
+        display: none;
+    }
+
+    .menu-burger {
+        display: block;
+    }
+
+    .menu-burger button {
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 24px;
+        width: 30px;
+    }
+
+    .menu-burger .bar {
+        background-color: white;
+        height: 3px;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .title {
+        text-align: center;
+    }
+   
+    .contenu-crew {
+        flex-direction: column;
+    }
+
+    .text h2 {
+        text-align: center;
+    }
+
+    .text span {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .text p {
+        text-align: center;
+    }
+
+    .biography,
+    .photo {
+        width: 100%;
+    }
+
+    .pagination {
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .photo {
+        margin-top: 50px;
+    }
+
+    .menu li a:hover::after {
+        width: 0;
+        opacity: 0;
+    }
+
+    .menu li a.active::after {
+        width: 0;
+    }
 }

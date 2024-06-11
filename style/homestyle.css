@@ -53,6 +53,30 @@ header nav {
     font-weight: 400;
     font-style: normal;
     text-transform: uppercase;
+    padding: 5px;
+    position: relative;
+}
+
+.menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.menu li a.active::after {
+    width: 100%;
+    opacity: 1;
 }
 
 .number {
@@ -64,13 +88,15 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 200px;
-    padding: 0 200px;
+    max-width: 1440px;
+    margin: 200px auto 0 auto;
+    padding-top: 200px;
 }
 
 .content {
     flex: 1;
     max-width: 540px;
+    padding-right: 20px;
 }
 
 .content h1 {
@@ -112,15 +138,209 @@ main {
     color: #0B0D17;
     width: 272px;
     height: 272px;
-    border-radius: 150px;
+    border-radius: 50%;
     text-align: center;
     font-size: 18px;
     font-family: 'Bellefair', serif;
     font-weight: 400;
     font-style: normal;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.explore::after {
+    content: "";
+    position: absolute;
+    width: 272px;
+    height: 272px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.explore:hover {
+    width: 420px;
+    height: 420px;
+    background-color: rgba(245, 244, 244, 0.3);
 }
 
 .explore span {
     display: block;
     text-transform: uppercase;
+}
+
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-burger {
+    display: none;
+}
+
+@media (min-width: 376px) and (max-width: 768px){
+    body {
+        background-image: url("../assets/home/background-home-tablet.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-line {
+        display: none;
+    }
+
+    .menu {
+        justify-content: end;
+        width: 80%;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    main {
+        flex-direction: column;
+        padding:  20px;
+    }
+
+    .nav-line {
+        display: none;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+        font-size: 16px;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    .content h1 {
+        font-size: 24px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .content p {
+        margin-left: 160px;
+        width: 50%;
+    }
+
+    .explore {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: url("../assets/home/background-home-mobile.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        padding: 0 20px;
+        margin-top: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-line {
+        display: none;
+    }
+
+    .menu-burger {
+        display: block;
+    }
+
+    .menu-burger button {
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 24px;
+        width: 30px;
+    }
+
+    .menu-burger .bar {
+        background-color: white;
+        height: 3px;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+        font-size: 16px;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+    .content p {
+        margin-left: 90px;
+        width: 50%;
+    }
+
+    .explore {
+        margin-top: 50px;
+    }
+
+    .menu-toggle {
+        display: block;
+        top: 40px;
+        right: 20px;
+        z-index: 2;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+
+    .menu-toggle.active + .menu {
+        display: block;
+    }
+
+    .menu li {
+        padding: 10px;
+    }
+
+    .menu a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+
+
+    
+ 
 }
